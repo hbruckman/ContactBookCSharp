@@ -171,7 +171,8 @@ public class ContactBook
 
 	private void ShowExitScreen()
 	{
-
+		Console.Clear();
+		Console.WriteLine("Thank you for using Bruckman's Contact Book!");
 	}
 
 	private void PressEnterContinue()
