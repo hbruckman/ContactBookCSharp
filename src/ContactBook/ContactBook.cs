@@ -110,7 +110,14 @@ public class ContactBook
 
 	private void ShowInputOptions()
 	{
+		string inputOptions = ""
+		+ $"[{NEXT_PAGE}] Next Page | [{CREATE_CONTACT}] Create Contact | [{DELETE_CONTACT}] Delete Contact | [{DEDUPLICATE_CONTACTS}] Deduplicate Contacts\n"
+		+ $"[{PREV_PAGE}] Prev Page | [{REVIEW_CONTACT}] Review Contact | [{FIND_CONTACTS }]  Find Contacts | [{PAGE_SIZE           }] Change Page Size\n"
+		+ $"[{GOTO_PAGE}] Goto Page | [{UPDATE_CONTACT}] Update Contact | [{ORDER_CONTACTS}] Order Contacts | [{EXIT                }] Exit\n"
+		+ $"\n> ";
 
+		Console.WriteLine();
+		Console.Write(inputOptions);
 	}
 
 	private string GetInput()
