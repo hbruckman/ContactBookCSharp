@@ -17,14 +17,18 @@ public class ContactMerger
 
 			if(!string.IsNullOrWhiteSpace(phone))
 			{
-				if(phoneIndex.TryGetValue(phone, out int existing)) {	ds.Union(existing, i); }
-				else { phoneIndex[phone] = i;	}
+				if(!phoneIndex.TryGetValue(phone, out int existing))
+				{ phoneIndex[phone] = i;	}
+				else
+				{	ds.Union(existing, i); }
 			}
 
 			if(!string.IsNullOrWhiteSpace(email))
 			{
-				if(emailIndex.TryGetValue(email, out int existing)) {	ds.Union(existing, i); }
-				else { emailIndex[email] = i;	}
+				if(!emailIndex.TryGetValue(email, out int existing))
+				{ emailIndex[email] = i;	}
+				else
+				{	ds.Union(existing, i); }
 			}
 		}
 
